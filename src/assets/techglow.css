@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+@keyframes float {
+    0% {
+        margin-top: 10vh;
+    }
+    50% {
+        margin-top: 12vh;
+    }
+    100% {
+        margin-top: 10vh;
+    }
+}
+
+/* Media queries */
+@media (max-width: 1100px) {
+    .logo-footer {
+        height: 80%;
+    }
+    .ticket-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .ticket-text{
+        width: 50vw !important;
+    }
+    .event-agenda{
+        margin-top: 5vh;
+    }
+    .event-agenda{
+        margin-left: 0px !important;
+    }
+}
+
+@media (max-width: 800px){
+    .front-text {
+        font-size: 50px !important;
+    }
+    .event-agenda {
+        margin-left: 0px !important;
+        margin-top: 5vh;
+    }
+    .ticket-text{
+        width: 80% !important;
+    }
+    .info-text {
+        width: 80% !important;
+    }
+    .footer-wrapper {
+        padding: 0px 10vw 0px 10vw !important;
+    }
+}
+
+@media (max-width: 630px){
+    .front-text {
+        font-size: 25px !important;
+    }
+}
+
+@media (max-width: 550px){
+    .event-agenda {
+
+    }
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #000000;
+}
+
+a{
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.site-wrapper {
+    padding: 0 10vw 0 10vw;
+}
+
+
+/* Animaties */
+.animated {
+    opacity: 0;
+    transition: .5s;
+}
+
+.fade-up {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+}
+
+.fade-down {
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+}
+
+.fade-left {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+}
+
+.fade-right {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+}
+
+.delay {
+    transition-delay: 0.1s;
+}
+
+.visible {
+    opacity: 1;
+    transform: translate(0px);
+    -webkit-transform: translate(0px);
+}
+
+/* Main */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 150vh;
+}
+
+.front-section {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./img/background-faded.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo-container {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    animation: float 2s ease-in-out infinite;
+    z-index: 999;
+}
+
+.fronttext-container {
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/*Ticket section */
+
+.ticket-container {
+    color:#fff;
+}
+
+.info-container {
+    color:#fff;
+}
+
+.event-item {
+    margin-top: 2vh;
+}
+
+.event-time {
+    font-size: 0.9rem;
+}
+
+li:first-child{
+    margin: 0px;
+}
+
+.event-container {
+    border: 1px solid white;
+    padding: 5px;
+}
+
+.ticketBtn {
+    text-decoration: none; 
+    color:#c40606; 
+    border: 1px solid #c40606; 
+    border-radius: 25px; 
+    min-height: 50px; 
+    width: 150px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin-top: 40px;
+}
+
+.ticketBtn-front {
+    text-decoration: none; 
+    color:white; 
+    border: 1px solid white; 
+    border-radius: 25px; 
+    min-height: 50px; 
+    width: 150px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin-top: 40px;
+    font-size: 1.2rem;
+}
+
+.ticketBtn-front:hover {
+    transform: scale(1.05);
+    color: #c40606;
+    border: 1px solid #c40606;
+}
+
+.ticketBtn:hover {
+    transform: scale(1.05);
+    color: white;
+    border: 1px solid white;
+}
+
+
+/* Footer */
+.social-icon:hover {
+    border: 2px solid #c40606 !important;
+}
+
+.icon:hover {
+    color: #c40606 !important;
+}
+
+.footer-link {
+    color: white;
+}
+.footer-link:hover {
+    color: #c40606;
+    text-decoration: underline;
+}
+
+.logo-footer {
+    display: block;
+    max-width: 270px;
+    max-height: 342px;
+    height: auto;
+    width: auto;
+}
