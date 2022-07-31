@@ -1,18 +1,31 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import router from './router/index'
 
-/* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'
-
-/* import font awesome icon component */
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-
-/* import specific icons */
 import { faInstagram, faFacebookF } from '@fortawesome/free-brands-svg-icons'
-
-/* add icons to the library */
 library.add(faInstagram, faFacebookF)
+
+
+import { initializeApp } from "firebase/app";
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCgKcCr7zunwOaYuQk9STENq5aMPF_W1uY",
+  authDomain: "techglow-login.firebaseapp.com",
+  projectId: "techglow-login",
+  storageBucket: "techglow-login.appspot.com",
+  messagingSenderId: "168050855214",
+  appId: "1:168050855214:web:daff50ae84d9b2a4473ebf"
+};
+
+initializeApp(firebaseConfig);
 
 import './assets/techglow.css'
 
-createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app')
+const app = createApp(App)
+
+app.use(router)
+
+app.component('font-awesome-icon', FontAwesomeIcon).mount('#app')
