@@ -1,12 +1,11 @@
-<script setup>
+<script>
 import './js/animation'
 import "@fontsource/poppins"
+import 'vue'
+import { ref, onBeforeMount } from 'vue'
+import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth'
 
-/* import the fontawesome core */
-import { library } from '@fortawesome/fontawesome-svg-core'
 
-/* import font awesome icon component */
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 </script>
 

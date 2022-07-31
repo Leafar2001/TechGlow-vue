@@ -1,7 +1,5 @@
 <script>
-export default {
 
-}
 </script>
 
 <template>
@@ -30,7 +28,11 @@ export default {
                 <a href="https://shop.eventix.io/6bf08f3f-6d92-11ec-b3c4-9e36bf7d673e/tickets?shop_code=j47q93r9&original_referer=https%3A%2F%2Fl.instagram.com%2F" target="_blank" class="ticketBtn">Tickets</a>
             </div>
             <div style="width: fit-content;font-size: 1.2rem; margin-left: 10vw; height:fit-content; padding: 0px 40px 0px 40px; display: flex; justify-content: center; flex-direction: column; text-align: center;" class="animated fade-left delay event-agenda">
-                <h1 style="font-weight: bold;">Event Agenda</h1>
+                <div style="display: flex;">
+                    <h1 style="font-weight: bold;">Event Agenda</h1>
+                    <font-awesome-icon v-if="isLoggedIn == true" icon="fa-solid fa-pen" class="icon" style="color: #fff; padding: 12px"/>
+                    <font-awesome-icon v-if="isLoggedIn == true" icon="fa-solid fa-x" class="icon" style="color: #fff; padding: 12px"/>
+                </div>
                 <div style="margin-top: 1vh;" class="event-container">
                     <ul class="event-list">
                         <li class="event-item">

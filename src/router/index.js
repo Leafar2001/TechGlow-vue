@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
+import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import mainView from '../views/main.vue';
 import loginView from '../views/login.vue';
 
@@ -9,5 +10,6 @@ const router = createRouter({
         {path: "/login", name: "Login", component: loginView},
     ]
 })
+
 
 export default router;

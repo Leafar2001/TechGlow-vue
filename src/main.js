@@ -1,11 +1,16 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router/index'
+import './views/login.vue'
+import './views/main.vue'
+import './assets/techglow.css'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faInstagram, faFacebookF } from '@fortawesome/free-brands-svg-icons'
-library.add(faInstagram, faFacebookF)
+import { faPen, faX } from '@fortawesome/free-solid-svg-icons'
+import { ref, onMounted } from 'vue'
+library.add(faInstagram, faFacebookF, faPen, faX)
 
 
 import { initializeApp } from "firebase/app";
@@ -21,11 +26,6 @@ const firebaseConfig = {
 };
 
 initializeApp(firebaseConfig);
-
-import './assets/techglow.css'
-
 const app = createApp(App)
-
 app.use(router)
-
 app.component('font-awesome-icon', FontAwesomeIcon).mount('#app')
